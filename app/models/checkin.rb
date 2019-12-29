@@ -1,0 +1,2 @@
+class Checkin < Attendance
+end
