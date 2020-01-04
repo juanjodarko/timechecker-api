@@ -1,6 +1,9 @@
 class UsersController < ApplicationController
   skip_before_action :authorize_request, only: :signup
 
+  def create
+  end
+
   def signup
     user = User.create!(user_params)
     auth_token = AuthenticateUser.new(user.email, user.password).call

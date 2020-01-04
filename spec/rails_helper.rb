@@ -47,6 +47,7 @@ RSpec.configure do |config|
   config.include FactoryBot::Syntax::Methods
   config.include JsonSpecHelper
   config.include TokenSpecHelper
+  config.include ActiveSupport::Testing::TimeHelpers
 
   DatabaseCleaner.allow_remote_database_url = true
 
