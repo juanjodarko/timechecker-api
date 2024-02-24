@@ -8,6 +8,7 @@ class ApplicationController < ActionController::API
   private
 
   def authorize_request
+    pp request.headers.inspect
     @current_user = (AuthorizeApiRequest.new(request.headers).call)[:user]
   end
 end
